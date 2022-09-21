@@ -3,22 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>microblog</title>
+    <title>Microblog</title>
     <base href="/" />
     <link rel="icon" href="favicon.ico" />
-    <link type="text/css" rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple-v1.css" />
   </head>
   <body>
+    <header><h1>Microblog</h1></header>
     <main>
-      <img src="logo2.svg" alt="DFINITY logo" />
+      <label for="otp">OTP</label>
+      <input id="otp" value="123456"></input>
       <br />
+      <span id="error"></span>
+      <h3 id="who"></h3>
+      <h5 id="canisterId"></h5>
+      
+      <input id="name" placeholder="Set your name? Please input here"></input>
+      <button id="set_name">Set Name</button>
       <br />
-      <form action="#">
-        <label for="name">Enter your name: &nbsp;</label>
-        <input id="name" alt="Name" type="text" />
-        <button type="submit">Click Me!</button>
-      </form>
-      <section id="greeting"></section>
+      <label for="message">What do you want to post?</label>
+      <textarea id="message"></textarea>
+      <br/>
+
+      <button id="post">Post</button>
+     
+      <section id="posts"></section>
+
+      <br/>
+      <input id="follow" placeholder="Follow someone? Please input the Canister ID"></input>
+      <button id="btn_follow">Follow</button>
+
+      <h3>My follows</h3>
+      <section id="my_follows"></section>
+
+      <h3>My timeline</h3>
+      <section id="my_timeline"></section>
+
     </main>
   </body>
 </html>
